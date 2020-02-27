@@ -1,5 +1,5 @@
 /// To search your the type of your array must implement: Sized PartialEq, PartialOrd
-/// Time Complexity:O(log(n)) 
+/// Time Complexity: O(log(n)) 
 /// Space Complexity: O(1)
 pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) -> bool {
     let mut low = 0;

@@ -7,6 +7,15 @@ pub fn test_binary_search_1() {
 
 #[test]
 pub fn test_binary_search_2() {
-    let my_arr: [i32;6] = [1,2,3,-5,2,100];
+    let my_arr: [i32;6] = [1,2,3,5,22,100];
     assert_eq!(binary_search(&my_arr, 56), false);
 }
+
+#[test]
+pub fn test_binary_search_3() {
+    let my_arr: [i32;6] = [1,2,3,5,22,100];
+    assert_eq!(binary_search(&my_arr, -2), false)
+}
+
+
+

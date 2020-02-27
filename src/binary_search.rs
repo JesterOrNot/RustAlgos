@@ -3,14 +3,19 @@ pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) 
     let mut low = 0;
     let mut high = array.len() - 1;
     while low <= high {
-        let mid: usize = low + (high - low) / 2;
+        let mid = low + (high - low) / 2;
         if array[mid] == target {
             return true;
-        } else if *array.get(mid).unwrap() < target {
+        } else if array[mid] < target {
             low = mid + 1;
         } else {
-            high = mid - 1;
+            if !(mid - 1 > 0) {
+                high = mid - 1;
+            } else {
+                return false;
+            }
         }
     }
     return false;
 }
+

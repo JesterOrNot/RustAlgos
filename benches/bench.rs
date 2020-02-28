@@ -56,3 +56,4 @@ pub fn bench_6(b: &mut Bencher) {
         assert_eq!(binary_search(&my_arr, 220000000), true)
     })
 }
+

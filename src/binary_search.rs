@@ -10,12 +10,10 @@ pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) 
             return true;
         } else if array[mid] < target {
             low = mid + 1;
+        } else if !(mid - 1 > 0) {
+            high = mid - 1;
         } else {
-            if !(mid - 1 > 0) {
-                high = mid - 1;
-            } else {
-                return false;
-            }
+            return false;
         }
     }
     return false;

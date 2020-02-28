@@ -18,4 +18,3 @@ pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) 
     }
     return false;
 }
-

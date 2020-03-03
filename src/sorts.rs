@@ -30,3 +30,14 @@ pub fn selection_sort<T: Sized + PartialEq + PartialOrd>(list: &mut [T]) {
         list.swap(small, i);
     }
 }
+
+pub fn insertion_sort<T: Ord>(list: &mut [T]) {
+    for i in 1..list.len() {
+        for j in (1..i + 1).rev() {
+            if list[j - 1] <= list[j] {
+                break;
+            }
+            list.swap(j - 1, j)
+        }
+    }
+}

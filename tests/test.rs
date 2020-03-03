@@ -1,4 +1,4 @@
-use rust_algo::{binary_search, selection_sort, insertion_sort};
+use rust_algo::{binary_search, insertion_sort, selection_sort};
 
 #[test]
 pub fn test_binary_search_1() {

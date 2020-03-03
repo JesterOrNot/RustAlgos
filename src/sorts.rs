@@ -19,6 +19,9 @@ pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) 
     return false;
 }
 
+/// To search your the type of your array must implement: Sized PartialEq, PartialOrd
+/// Time Complexity: O(n^2)
+/// Space Complexity: O(1)
 pub fn selection_sort<T: Sized + PartialEq + PartialOrd>(array: &mut [T]) {
     for i in 0..array.len() {
         let mut small = i;
@@ -31,6 +34,9 @@ pub fn selection_sort<T: Sized + PartialEq + PartialOrd>(array: &mut [T]) {
     }
 }
 
+/// To search your the type of your array must implement Ord
+/// Time Complexity: O(n^2)
+/// Space Complexity: O(1)
 pub fn insertion_sort<T: Ord>(array: &mut [T]) {
     for i in 1..array.len() {
         for j in (1..i + 1).rev() {

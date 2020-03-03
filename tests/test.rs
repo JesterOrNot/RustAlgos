@@ -1,4 +1,4 @@
-use rust_algo::binary_search;
+use rust_algo::{binary_search, selection_sort};
 
 #[test]
 pub fn test_binary_search_1() {
@@ -37,4 +37,11 @@ pub fn test_binary_search_6() {
         80000000, 90000000, 99000000, 100000000, 110000000, 120000000, 200000000, 220000000,
     ];
     assert_eq!(binary_search(&my_arr, 220000000), true)
+}
+
+#[test]
+pub fn test_selection_sort_1() {
+    let mut my_arr: [i32; 4] = [4, 2, 1, 6];
+    selection_sort(&mut my_arr);
+    assert_eq!(my_arr, [1, 2, 4, 6]);
 }

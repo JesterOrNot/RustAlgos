@@ -8,7 +8,7 @@ edition = "2018"
 
 [lib]
 name = "rust_algo"
-path = "src/binary_search.rs"
+path = "src/sorts.rs"
 
 
 [dependencies]

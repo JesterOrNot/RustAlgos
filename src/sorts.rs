@@ -18,3 +18,15 @@ pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) 
     }
     return false;
 }
+
+pub fn selection_sort<T: Sized + PartialEq + PartialOrd>(list: &mut [T]) {
+    for i in 0..list.len() {
+        let mut small = i;
+        for j in (i + 1)..list.len() {
+            if list[j] < list[small] {
+                small = j;
+            }
+        }
+        list.swap(small, i);
+    }
+}

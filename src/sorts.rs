@@ -19,25 +19,25 @@ pub fn binary_search<T: Sized + PartialEq + PartialOrd>(array: &[T], target: T) 
     return false;
 }
 
-pub fn selection_sort<T: Sized + PartialEq + PartialOrd>(list: &mut [T]) {
-    for i in 0..list.len() {
+pub fn selection_sort<T: Sized + PartialEq + PartialOrd>(array: &mut [T]) {
+    for i in 0..array.len() {
         let mut small = i;
-        for j in (i + 1)..list.len() {
-            if list[j] < list[small] {
+        for j in (i + 1)..array.len() {
+            if array[j] < array[small] {
                 small = j;
             }
         }
-        list.swap(small, i);
+        array.swap(small, i);
     }
 }
 
-pub fn insertion_sort<T: Ord>(list: &mut [T]) {
-    for i in 1..list.len() {
+pub fn insertion_sort<T: Ord>(array: &mut [T]) {
+    for i in 1..array.len() {
         for j in (1..i + 1).rev() {
-            if list[j - 1] <= list[j] {
+            if array[j - 1] <= array[j] {
                 break;
             }
-            list.swap(j - 1, j)
+            array.swap(j - 1, j)
         }
     }
 }
